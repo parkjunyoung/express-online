@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "nunjucks": "^3.2.0"
   }
 }
