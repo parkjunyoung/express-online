@@ -8,13 +8,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container" style="padding-top:100px;">
+    <div class="container" style="padding-top: 10px;">
+        <nav class="navbar navbar-inverse"> 
+            <div class="container-fluid"> 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                    <ul class="nav navbar-nav">
+                        
+                        {% from "macro/link.html" import link %}
+                        {{ link( '/admin/products' , "List" , req_path ) }}
+                        {{ link( '/admin/products/write' , "Write" , req_path ) }}
+                       
 
-        {% if isLogin %}
-            로그인 중
-        {% else %}
-            로그인이 안되어 있습니다.
-        {% endif %}
+                        <!-- <li class="active">
+                            <a href="/admin/products">List</a>
+                        </li>
+                        <li><a href="/admin/products/write">Write</a></li>
+                        -->
+                    </ul> 
+                </div> 
+            </div> 
+        </nav>
 
         {% block content %}{% endblock %}
 
